@@ -28,7 +28,7 @@
         </p>
         <h1>Grazielle Santana</h1>
         <p>
-          Sou uma desenvolvedora web, dedicada a transformar conceitos criativos em soluções digitais inovadoras. Explore meu portfólio para conhecer os projetos que marcaram minha trajetória e evidenciam minha profunda paixão pela tecnologia
+          Desenvolvedora web, dedicada a transformar conceitos criativos em soluções digitais inovadoras. Explore meu portfólio para conhecer os projetos que marcaram minha trajetória e evidenciam minha profunda paixão pela tecnologia
         </p>
       </div>
     </div>

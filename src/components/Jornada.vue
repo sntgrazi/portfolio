@@ -72,7 +72,7 @@
             </p>
           </div>
           <div class="time">
-            <h4>Junho 2023</h4>
+            <h4>2024</h4>
           </div>
         </li>
       </ul>
@@ -172,7 +172,7 @@
 }
 
 .timeline > ul > li > .content > h3 {
-  color: #b350ec;
+  color: #7FDBFF;
 }
 
 .timeline > ul > li > .content > p {
