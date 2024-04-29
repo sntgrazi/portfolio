@@ -23,18 +23,14 @@
         <img src="@/assets/img/avatar.png" alt="" />
       </div>
       <div class="texto-apresentacao">
-        <h2 class="mb-3">
-          Olá, sou a sntgrazi, ou melhor dizendo, <br />
-          Grazielle Santana.
-        </h2>
-        <h3 class="mb-4">
-          Desenvolvedora web apaixonada por transformar <br />
-          ideias em realidades digitais. Descubra projetos <br />
-          que demonstram minha jornada e paixão pela <br />
-          tecnologia.
-        </h3>
+        <p class="intro">
+          Olá, sou a <span class="highlight">sntgrazi</span>, ou melhor dizendo,
+        </p>
+        <h1>Grazielle Santana</h1>
+        <p>
+          Sou uma desenvolvedora web, dedicada a transformar conceitos criativos em soluções digitais inovadoras. Explore meu portfólio para conhecer os projetos que marcaram minha trajetória e evidenciam minha profunda paixão pela tecnologia
+        </p>
       </div>
-      
     </div>
   </div>
 </template>
@@ -47,7 +43,7 @@
   background-color: var(--color-black);
   width: 100%;
   height: 100%;
-  color: #5c8fee;
+  color: #fff;
   padding-bottom: 30px;
 }
 
@@ -60,6 +56,7 @@
 .nome {
   display: flex;
   align-items: center;
+  font-size: 1.2em;
 }
 
 .menuIcon > svg {
@@ -71,22 +68,30 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 15%;
+  padding: 0 16%;
 }
 
 .img > img {
   width: 100%;
-  max-width: 400px;
+  max-width: 380px;
 }
 
-.texto-apresentacao {
+.texto-apresentacao  {
+  max-width: 650px;
+  margin: auto;
   text-align: center;
+  font-size: 1.2em;
 }
 
-.texto-apresentacao > h2 {
-  font-size: 1.65em;
-  margin-bottom: 15px;
+.texto-apresentacao h1 {
+  color: #7FDBFF;
+  margin: 0.5em 0;
 }
+
+.highlight {
+    font-weight: bold; 
+  }
+
 
 @media (max-width: 768px) {
   .info {
