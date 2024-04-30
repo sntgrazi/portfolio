@@ -19,7 +19,7 @@
                    src="../assets/img/projeto1.png"
                   alt="image.alt"
                 />
-                <p class="image-text">Mindhub</p>
+                <p class="image-text"><a href="https://docs.google.com/presentation/d/1kKqY1Jewsa8Kd9q642Ip4ACgo8JdbuFEgLkpACS4wfY/edit" target="_blank">Mindhub</a></p>
               </div>
             </div>
           </li>
@@ -32,7 +32,7 @@
                    src="../assets/img/projeto2.png"
                   alt="image.alt"
                 />
-                <p class="image-text">Penguin’s BarberShop</p>
+                <p class="image-text"><a href="https://docs.google.com/presentation/d/1XlIff3afECB7TxXuo7FdvKC5349ukA56xDqbKSPYoZU/edit" target="_blank">Penguin’s BarberShop</a></p>
               </div>
             </div>
           </li>
@@ -45,7 +45,7 @@
                    src="../assets/img/projeto3.png"
                   alt="image.alt"
                 />
-                <p class="image-text">App para rastreamento de entregas</p>
+                <p class="image-text"><a href="https://coursera-assessments.s3.amazonaws.com/assessments/1696260830705/c975a846-5236-409f-adc1-10510fa89039/slide%20-%20pesquisa.pdf" target="_blank">TrackPack</a></p>
               </div>
             </div>
           </li>
@@ -241,6 +241,11 @@ export default {
   font-size: 20px;
   border-radius: 0px 0px 17px 17px;
   padding: 5px 15px;
+}
+
+.image-text a {
+  color: #000;
+  
 }
 
 .projeto {
