@@ -105,16 +105,6 @@ export default {
       this.maxScrollLeft =
         this.imageList.scrollWidth - this.imageList.clientWidth;
 
-      // Conta o número de itens de imagem
-      const imageCount = this.imageList.querySelectorAll("li").length;
-
-      // Adiciona classe condicionalmente com base no número de imagens
-      if (imageCount <= 4) {
-        this.imageList.classList.add("centered-images");
-      } else {
-        this.imageList.classList.remove("centered-images");
-      }
-
       this.scrollbarThumb.addEventListener("mousedown", this.handleMouseDown);
       this.slideButtons.forEach((button) => {
         button.addEventListener("click", this.handleButtonClick);
@@ -297,16 +287,6 @@ export default {
 
 .slider-wrapper {
   position: relative;
-}
-
-.slider-wrapper .image-list.centered-images {
-  display: flex;
-  justify-content: center;
-  gap: 30px; 
-}
-
-.slider-wrapper .image-list.centered-images li {
-  flex: 0 0 auto;
 }
 
 .slider-wrapper .slide-button {
