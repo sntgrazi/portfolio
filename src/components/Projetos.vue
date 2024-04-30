@@ -16,10 +16,16 @@
               <div class="box">
                 <img
                   class="image-item"
-                   src="../assets/img/projeto1.png"
+                  src="../assets/img/projeto1.png"
                   alt="image.alt"
                 />
-                <p class="image-text"><a href="https://docs.google.com/presentation/d/1kKqY1Jewsa8Kd9q642Ip4ACgo8JdbuFEgLkpACS4wfY/edit" target="_blank">Mindhub</a></p>
+                <p class="image-text">
+                  <a
+                    href="https://docs.google.com/presentation/d/1kKqY1Jewsa8Kd9q642Ip4ACgo8JdbuFEgLkpACS4wfY/edit?usp=sharing"
+                    target="_blank"
+                    >Mindhub</a
+                  >
+                </p>
               </div>
             </div>
           </li>
@@ -29,10 +35,16 @@
               <div class="box">
                 <img
                   class="image-item"
-                   src="../assets/img/projeto2.png"
+                  src="../assets/img/projeto2.png"
                   alt="image.alt"
                 />
-                <p class="image-text"><a href="https://docs.google.com/presentation/d/1XlIff3afECB7TxXuo7FdvKC5349ukA56xDqbKSPYoZU/edit" target="_blank">Penguin’s BarberShop</a></p>
+                <p class="image-text">
+                  <a
+                    href="https://docs.google.com/presentation/d/1XlIff3afECB7TxXuo7FdvKC5349ukA56xDqbKSPYoZU/edit?usp=sharing"
+                    target="_blank"
+                    >Penguin’s BarberShop</a
+                  >
+                </p>
               </div>
             </div>
           </li>
@@ -42,10 +54,16 @@
               <div class="box">
                 <img
                   class="image-item"
-                   src="../assets/img/projeto3.png"
+                  src="../assets/img/projeto3.png"
                   alt="image.alt"
                 />
-                <p class="image-text"><a href="https://coursera-assessments.s3.amazonaws.com/assessments/1696260830705/c975a846-5236-409f-adc1-10510fa89039/slide%20-%20pesquisa.pdf" target="_blank">TrackPack</a></p>
+                <p class="image-text">
+                  <a
+                    href="https://coursera-assessments.s3.amazonaws.com/assessments/1696260830705/c975a846-5236-409f-adc1-10510fa89039/slide%20-%20pesquisa.pdf"
+                    target="_blank"
+                    >TrackPack</a
+                  >
+                </p>
               </div>
             </div>
           </li>
@@ -86,6 +104,16 @@ export default {
         this.sliderScrollbar.querySelector(".scrollbar-thumb");
       this.maxScrollLeft =
         this.imageList.scrollWidth - this.imageList.clientWidth;
+
+      // Conta o número de itens de imagem
+      const imageCount = this.imageList.querySelectorAll("li").length;
+
+      // Adiciona classe condicionalmente com base no número de imagens
+      if (imageCount <= 4) {
+        this.imageList.classList.add("centered-images");
+      } else {
+        this.imageList.classList.remove("centered-images");
+      }
 
       this.scrollbarThumb.addEventListener("mousedown", this.handleMouseDown);
       this.slideButtons.forEach((button) => {
@@ -225,7 +253,6 @@ export default {
   left: 20;
   border-radius: 17px 17px 0px 0px;
   z-index: 3;
-
 }
 
 .image-text {
@@ -245,7 +272,6 @@ export default {
 
 .image-text a {
   color: #000;
-  
 }
 
 .projeto {
@@ -271,6 +297,16 @@ export default {
 
 .slider-wrapper {
   position: relative;
+}
+
+.slider-wrapper .image-list.centered-images {
+  display: flex;
+  justify-content: center;
+  gap: 30px; 
+}
+
+.slider-wrapper .image-list.centered-images li {
+  flex: 0 0 auto;
 }
 
 .slider-wrapper .slide-button {
