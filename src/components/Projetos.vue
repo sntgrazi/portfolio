@@ -10,15 +10,43 @@
           chevron_left
         </button>
         <ul class="image-list">
-          <li v-for="i in 7" :key="i">
+          <li>
             <div class="box">
               <span></span>
-              <img
-                class="image-item"
-                :src="`https://source.unsplash.com/random/${i}`"
-                :alt="`img-${i}`"
-              />
-              <p class="image-text">Descrição da Imagem</p>
+              <div class="box">
+                <img
+                  class="image-item"
+                   src="../assets/img/projeto1.png"
+                  alt="image.alt"
+                />
+                <p class="image-text">Mindhub</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="box">
+              <span></span>
+              <div class="box">
+                <img
+                  class="image-item"
+                   src="../assets/img/projeto2.png"
+                  alt="image.alt"
+                />
+                <p class="image-text">Penguin’s BarberShop</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="box">
+              <span></span>
+              <div class="box">
+                <img
+                  class="image-item"
+                   src="../assets/img/projeto3.png"
+                  alt="image.alt"
+                />
+                <p class="image-text">App para rastreamento de entregas</p>
+              </div>
             </div>
           </li>
         </ul>
@@ -139,7 +167,7 @@ export default {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  color: #FFF;
+  color: #fff;
 }
 
 .box::before {
@@ -151,7 +179,7 @@ export default {
     transparent,
     transparent,
     transparent,
-    #00ccff
+    #4bdbff
   );
   animation: animate 4s linear infinite;
 }
@@ -165,7 +193,7 @@ export default {
     transparent,
     transparent,
     transparent,
-    #d400d4
+    #033eff
   );
   animation: animate 4s linear infinite;
   animation-delay: -2s;
@@ -191,29 +219,29 @@ export default {
 
 .box img {
   width: 290px;
-  height: 250px;
+  height: 290px;
   position: absolute;
   top: 5px;
   left: 20;
   border-radius: 17px 17px 0px 0px;
   z-index: 3;
-  object-fit: cover; 
+
 }
 
 .image-text {
+  text-align: center;
   background-color: #ffffff;
   position: absolute;
-  height: 92px;
+  height: 50px;
   width: 290px;
-  bottom: 4px; 
+  bottom: 5px;
   left: 5px;
   color: rgb(0, 0, 0);
-  z-index: 3; 
-  font-size: 16px;
+  z-index: 3;
+  font-size: 20px;
   border-radius: 0px 0px 17px 17px;
   padding: 5px 15px;
 }
-
 
 .projeto {
   background-color: var(--color-black);
