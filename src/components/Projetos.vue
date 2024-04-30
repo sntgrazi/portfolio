@@ -3,33 +3,34 @@
     <div class="titulo">
       <h2>Projetos</h2>
     </div>
-    
-      <div class="container">
-        <div class="slider-wrapper">
-          <button id="prev-slide" class="slide-button material-symbols-rounded">
-            chevron_left
-          </button>
-          <ul class="image-list">
-            <li v-for="i in 7" :key="i">
-              <div class="box"> 
-                <span></span>
-                <img
+
+    <div class="container">
+      <div class="slider-wrapper">
+        <button id="prev-slide" class="slide-button material-symbols-rounded">
+          chevron_left
+        </button>
+        <ul class="image-list">
+          <li v-for="i in 7" :key="i">
+            <div class="box">
+              <span></span>
+              <img
                 class="image-item"
                 :src="`https://source.unsplash.com/random/${i}`"
                 :alt="`img-${i}`"
-              /> 
-              </div>
-            </li>
-          </ul>
-          <button id="next-slide" class="slide-button material-symbols-rounded">
-            chevron_right
-          </button>
+              />
+              <p class="image-text">Descrição da Imagem</p>
+            </div>
+          </li>
+        </ul>
+        <button id="next-slide" class="slide-button material-symbols-rounded">
+          chevron_right
+        </button>
+      </div>
+      <div class="slider-scrollbar">
+        <div class="scrollbar-track">
+          <div class="scrollbar-thumb"></div>
         </div>
-        <div class="slider-scrollbar">
-          <div class="scrollbar-track">
-            <div class="scrollbar-thumb"></div>
-          </div>
-        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -53,8 +54,10 @@ export default {
       this.imageList = this.$el.querySelector(".image-list");
       this.slideButtons = this.$el.querySelectorAll(".slide-button");
       this.sliderScrollbar = this.$el.querySelector(".slider-scrollbar");
-      this.scrollbarThumb = this.sliderScrollbar.querySelector(".scrollbar-thumb");
-      this.maxScrollLeft = this.imageList.scrollWidth - this.imageList.clientWidth;
+      this.scrollbarThumb =
+        this.sliderScrollbar.querySelector(".scrollbar-thumb");
+      this.maxScrollLeft =
+        this.imageList.scrollWidth - this.imageList.clientWidth;
 
       this.scrollbarThumb.addEventListener("mousedown", this.handleMouseDown);
       this.slideButtons.forEach((button) => {
@@ -65,22 +68,28 @@ export default {
     handleMouseDown(e) {
       this.startX = e.clientX;
       this.thumbPosition = this.scrollbarThumb.offsetLeft;
-      this.maxThumbPosition = this.sliderScrollbar.getBoundingClientRect().width - this.scrollbarThumb.offsetWidth;
+      this.maxThumbPosition =
+        this.sliderScrollbar.getBoundingClientRect().width -
+        this.scrollbarThumb.offsetWidth;
 
       const handleMouseMove = (e) => {
         const deltaX = e.clientX - this.startX;
         const newThumbPosition = this.thumbPosition + deltaX;
-        const boundedPosition = Math.max(0, Math.min(this.maxThumbPosition, newThumbPosition));
-        const scrollPosition = (boundedPosition / this.maxThumbPosition) * this.maxScrollLeft;
+        const boundedPosition = Math.max(
+          0,
+          Math.min(this.maxThumbPosition, newThumbPosition)
+        );
+        const scrollPosition =
+          (boundedPosition / this.maxThumbPosition) * this.maxScrollLeft;
 
         this.scrollbarThumb.style.left = `${boundedPosition}px`;
         this.imageList.scrollLeft = scrollPosition;
-      }
+      };
 
       const handleMouseUp = () => {
         document.removeEventListener("mousemove", handleMouseMove);
         document.removeEventListener("mouseup", handleMouseUp);
-      }
+      };
 
       document.addEventListener("mousemove", handleMouseMove);
       document.addEventListener("mouseup", handleMouseUp);
@@ -95,14 +104,18 @@ export default {
       this.handleSlideButtons();
     },
     handleSlideButtons() {
-      this.slideButtons[0].style.display = this.imageList.scrollLeft <= 0 ? "none" : "flex";
-      this.slideButtons[1].style.display = this.imageList.scrollLeft >= this.maxScrollLeft ? "none" : "flex";
+      this.slideButtons[0].style.display =
+        this.imageList.scrollLeft <= 0 ? "none" : "flex";
+      this.slideButtons[1].style.display =
+        this.imageList.scrollLeft >= this.maxScrollLeft ? "none" : "flex";
     },
     updateScrollThumbPosition() {
       const scrollPosition = this.imageList.scrollLeft;
-      const thumbPosition = (scrollPosition / this.maxScrollLeft) * (this.sliderScrollbar.clientWidth - this.scrollbarThumb.offsetWidth);
+      const thumbPosition =
+        (scrollPosition / this.maxScrollLeft) *
+        (this.sliderScrollbar.clientWidth - this.scrollbarThumb.offsetWidth);
       this.scrollbarThumb.style.left = `${thumbPosition}px`;
-    }
+    },
   },
   mounted() {
     this.initSlider();
@@ -110,69 +123,97 @@ export default {
   },
   beforeDestroy() {
     window.removeEventListener("resize", this.initSlider);
-  }
-}
+  },
+};
 </script>
 
 <style>
-
 .box {
-    position: relative;
-    width: 300px;
-    height: 400px;
-    background-color: rgba(0, 0, 0, 0.75);
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  position: relative;
+  width: 300px;
+  height: 350px;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: #FFF;
 }
 
 .box::before {
-    content: '';
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
-    animation: animate 4s linear infinite;
-
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-image: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    #00ccff
+  );
+  animation: animate 4s linear infinite;
 }
 
 .box::after {
-    content: '';
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background-image: conic-gradient(transparent, transparent, transparent, #d400d4);
-    animation: animate 4s linear infinite;
-    animation-delay: -2s;
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-image: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    #d400d4
+  );
+  animation: animate 4s linear infinite;
+  animation-delay: -2s;
 }
 
 @keyframes animate {
-    0% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
 
-    100% {
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .box span {
-    position: absolute;
-    inset: 5px;
-    border-radius: 16px;
-    background: #0c1022;
-    z-index: 1;
+  position: absolute;
+  inset: 5px;
+  border-radius: 16px;
+  background: #0c1022;
+  z-index: 1;
 }
 
 .box img {
-    width: 290px;
-    height: 390px;
-    position: relative;
-    z-index: 2;
-    border-radius: 17px;
+  width: 290px;
+  height: 250px;
+  position: absolute;
+  top: 5px;
+  left: 20;
+  border-radius: 17px 17px 0px 0px;
+  z-index: 3;
+  object-fit: cover; 
 }
+
+.image-text {
+  background-color: #ffffff;
+  position: absolute;
+  height: 92px;
+  width: 290px;
+  bottom: 4px; 
+  left: 5px;
+  color: rgb(0, 0, 0);
+  z-index: 3; 
+  font-size: 16px;
+  border-radius: 0px 0px 17px 17px;
+  padding: 5px 15px;
+}
+
 
 .projeto {
   background-color: var(--color-black);
@@ -181,13 +222,17 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 45px 0px;
+  padding: 55px 0px;
   color: var(--color-white);
+}
+
+.projeto > .titulo {
+  font-size: 1.3em;
 }
 
 .container {
   margin-top: 50px;
-  max-width: 1200px;
+  max-width: 1500px;
   width: 95%;
 }
 
@@ -241,8 +286,6 @@ export default {
 .slider-wrapper .image-list::-webkit-scrollbar {
   display: none;
 }
-
-
 
 .container .slider-scrollbar {
   height: 24px;
@@ -302,8 +345,8 @@ export default {
     scroll-snap-type: x mandatory;
   }
   .slider-wrapper .image-list .image-item {
-    width: 280px;
-    height: 380px;
+    width: 290px;
+    height: 290px;
   }
   .slider-scrollbar .scrollbar-thumb {
     width: 20%;

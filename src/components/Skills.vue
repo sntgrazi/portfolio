@@ -63,7 +63,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px 0px;
   color: var(--color-white);
 }
 
@@ -72,7 +71,7 @@
 }
 
 .icones {
-  margin-top: 40px;
+  margin-top: 50px;
   widows: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);

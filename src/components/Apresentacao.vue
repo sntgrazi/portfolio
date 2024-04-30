@@ -19,8 +19,8 @@
       </div>
     </div>
     <div class="info">
-      <div class="img">
-        <img src="@/assets/img/avatar.png" alt="" />
+      <div class="img-container">
+        <img src="@/assets/img/avatar.png" alt="Avatar" />
       </div>
       <div class="texto-apresentacao">
         <p class="intro">
@@ -28,8 +28,22 @@
         </p>
         <h1>Grazielle Santana</h1>
         <p>
-          Desenvolvedora web, dedicada a transformar conceitos criativos em soluções digitais inovadoras. Explore meu portfólio para conhecer os projetos que marcaram minha trajetória e evidenciam minha profunda paixão pela tecnologia
+          Desenvolvedora web, dedicada a transformar conceitos criativos em
+          soluções digitais inovadoras. Explore meu portfólio para conhecer os
+          projetos que marcaram minha trajetória e evidenciam minha profunda
+          paixão pela tecnologia
         </p>
+        <div class="icons">
+          <a href="https://github.com/sntgrazi" target="_blank">
+            <i class="fa-brands fa-square-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/sntgrazi" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="mailto:sntgrazi22@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -71,27 +85,43 @@
   padding: 0 16%;
 }
 
-.img > img {
+.img-container > img {
   width: 100%;
-  max-width: 380px;
+  max-width: 400px;
 }
 
-.texto-apresentacao  {
-  max-width: 650px;
+.icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 45px;
+}
+
+.icons a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.icons a:hover {
+  color: #b3b2b2;
+}
+
+.texto-apresentacao {
+  max-width: 700px;
   margin: auto;
   text-align: center;
   font-size: 1.2em;
 }
 
 .texto-apresentacao h1 {
-  color: #7FDBFF;
+  color: #7fdbff;
   margin: 0.5em 0;
 }
 
 .highlight {
-    font-weight: bold; 
-  }
-
+  font-weight: bold;
+}
 
 @media (max-width: 768px) {
   .info {
