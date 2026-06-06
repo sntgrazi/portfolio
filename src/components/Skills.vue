@@ -37,6 +37,18 @@
         <span>Laravel</span>
       </div>
       <div class="icone-wrapper">
+        <img
+          class="cor-icon"
+          src="../assets/icone/symfony.svg"
+          alt="Symfony"
+        />
+        <span>Symfony</span>
+      </div>
+      <div class="icone-wrapper">
+        <img class="cor-icon" src="../assets/icone/slim.svg" alt="Slim" />
+        <span>Slim</span>
+      </div>
+      <div class="icone-wrapper">
         <img class="cor-icon" src="../assets/icone/java.svg" alt="java" />
         <span>Java</span>
       </div>
@@ -47,6 +59,18 @@
       <div class="icone-wrapper">
         <img class="cor-icon" src="../assets/icone/mysql.svg" alt="mysql" />
         <span>Mysql</span>
+      </div>
+      <div class="icone-wrapper">
+        <img
+          class="cor-icon"
+          src="../assets/icone/postgresql.svg"
+          alt="PostgreSQL"
+        />
+        <span>PostgreSQL</span>
+      </div>
+      <div class="icone-wrapper">
+        <img class="cor-icon" src="../assets/icone/docker.svg" alt="Docker" />
+        <span>Docker</span>
       </div>
     </div>
   </div>

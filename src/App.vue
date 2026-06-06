@@ -9,9 +9,6 @@
     <div class="tecnologias">
       <skills></skills>
     </div>
-    <div class="projetos">
-      <projetos></projetos>
-    </div>
     <footer>
       <p>&copy; 2024 Sntgrazi. Todos os direitos reservados.</p>
     </footer>
@@ -22,7 +19,6 @@
 import Apresentacao from "./components/Apresentacao.vue";
 import Jornada from "./components/Jornada.vue";
 import Skills from "./components/Skills.vue";
-import Projetos from "./components/Projetos.vue";
 </script>
 
 <style>

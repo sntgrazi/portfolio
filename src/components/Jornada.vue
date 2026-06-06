@@ -94,12 +94,12 @@
         </li>
         <li>
           <div class="content">
-            <h3>Desenvolvedora Backend Júnior 2 na Vox Tecnologia</h3>
+            <h3>Desenvolvedora Backend Júnior 2</h3>
             <p>
-              Desde 10/2025, atuo como Desenvolvedora Backend
-              Júnior 2, seguindo com Symfony no dia a dia. Meu trabalho envolve
-              a resolução de bugs, criação de endpoints, documentação e apoio
-              na evolução contínua das APIs e serviços da empresa.
+              Desde 10/2025, atuo na minha empresa atual como Desenvolvedora
+              Backend Júnior 2, seguindo com Symfony no dia a dia. Meu trabalho
+              envolve a resolução de bugs, criação de endpoints, documentação e
+              apoio na evolução contínua das APIs e serviços da empresa.
             </p>
           </div>
           <div class="time">
