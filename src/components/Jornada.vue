@@ -10,8 +10,8 @@
             <h3>Curso de desenvolvimento Web</h3>
             <p>
               Iniciei na programação por meio de um curso que ganhei no SENAC
-              com duração de 4 meses, nele tive meus primeiro contato com a
-              programação web e conheci as tecnologias html, css e o php
+              com duração de 4 meses. Nele tive meu primeiro contato com a
+              programação web e conheci tecnologias como HTML, CSS e PHP.
             </p>
           </div>
           <div class="time">
@@ -22,9 +22,10 @@
           <div class="content">
             <h3>Técnico em desenvolvimento de sistemas</h3>
             <p>
-              No inicio de 2022, consegui uma bolsa no SENAI para fazer o curso
-              técnico, nele aprofundei mais em sobre a programação aprendendo
-              sobre metodologias ágeis, padrões de projetos e etc.
+              No início de 2022, consegui uma bolsa no SENAI para fazer o curso
+              técnico. Nele aprofundei ainda mais meus conhecimentos em
+              programação, aprendendo sobre metodologias ágeis, padrões de
+              projeto e outras boas práticas.
             </p>
           </div>
           <div class="time">
@@ -35,11 +36,12 @@
           <div class="content">
             <h3>Freelancer como Desenvolvedora Fullstack</h3>
             <p>
-              No final de junho, consegui meu primeiro freela que durou 3 meses
-              na empresa Legulas soluções em TI em que eu implementava novas
-              funcionalidades em alguns sistema, alteração de layouts em ouros
-              entre outras coisas. As tecnologias que mais tive contato durante
-              essa experiência foram o php, mysql, html, css e o javascript.
+              No final de junho, consegui meu primeiro freela, que durou 3
+              meses na empresa Legulas Soluções em TI. Nessa experiência,
+              implementei novas funcionalidades em alguns sistemas, fiz
+              alterações de layout e participei de outras demandas do dia a
+              dia. As tecnologias que mais utilizei foram PHP, MySQL, HTML,
+              CSS e JavaScript.
             </p>
           </div>
           <div class="time">
@@ -48,11 +50,11 @@
         </li>
         <li>
           <div class="content">
-            <h3>Tecnólogo em analise e desenvolvimento de sistemas</h3>
+            <h3>Tecnóloga em análise e desenvolvimento de sistemas</h3>
             <p>
               Ao concluir o curso no SENAI, tive a oportunidade de começar a
               cursar ADS na UNIFAN. Estou aprendendo mais sobre arquitetura de
-              software, segurança da informação, e desenvolvimento de aplicações
+              software, segurança da informação e desenvolvimento de aplicações
               web e móveis.
             </p>
           </div>
@@ -62,17 +64,46 @@
         </li>
         <li>
           <div class="content">
-            <h3>Atualmente</h3>
+            <h3>Projetos práticos e evolução profissional</h3>
             <p>
-              Estou aprofundando minhas habilidades através do meu curso
-              tecnólogo, envolvendo-me em projetos práticos e eventos da área.
-              Estou buscando oportunidades para aplicar meus conhecimentos em
-              projetos inovadores, enquanto cresço profissionalmente em um
-              ambiente que valoriza a inovação e o aprendizado contínuo.
+              Em 2024, continuei aprofundando minhas habilidades com projetos
+              práticos, estudos e participação em iniciativas da área. Esse
+              período ajudou a fortalecer minha base técnica e a me preparar
+              para desafios maiores no mercado.
             </p>
           </div>
           <div class="time">
             <h4>2024</h4>
+          </div>
+        </li>
+        <li>
+          <div class="content">
+            <h3>Desenvolvedora Fullstack na Wemind</h3>
+            <p>
+              De 06/2024 até 10/2025, atuei na Wemind desenvolvendo projetos
+              end to end, do back ao front, com modelagem de banco de dados.
+              Trabalhei em soluções como um chat em tempo real com WebSocket,
+              tendo o Symfony como principal tecnologia, além de realizar
+              manutenções em outros projetos da empresa e criar dashboards de
+              avaliações e outras melhorias contínuas.
+            </p>
+          </div>
+          <div class="time">
+            <h4>06/2024 - 10/2025</h4>
+          </div>
+        </li>
+        <li>
+          <div class="content">
+            <h3>Desenvolvedora Backend Júnior 2 na Vox Tecnologia</h3>
+            <p>
+              Desde 10/2025, atuo como Desenvolvedora Backend
+              Júnior 2, seguindo com Symfony no dia a dia. Meu trabalho envolve
+              a resolução de bugs, criação de endpoints, documentação e apoio
+              na evolução contínua das APIs e serviços da empresa.
+            </p>
+          </div>
+          <div class="time">
+            <h4>10/2025 - Atual</h4>
           </div>
         </li>
       </ul>
@@ -172,7 +203,7 @@
 }
 
 .timeline > ul > li > .content > h3 {
-  color: #7FDBFF;
+  color: #7fdbff;
 }
 
 .timeline > ul > li > .content > p {
